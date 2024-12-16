@@ -1,0 +1,40 @@
+/* Общий стиль контейнера */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Контейнер занимает всю высоту экрана */
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1; /* Основной контент занимает оставшуюся часть экрана */
+  overflow: hidden; /* Убираем прокрутку */
+}
+
+/* Боковая панель */
+.section-list {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  height: calc(100vh - 80px); /* Высота экрана минус хедер */
+  position: relative;
+  overflow-y: auto; /* Прокрутка только для списка */
+  flex-shrink: 0;
+}
+
+/* Область с графом */
+.content {
+  flex-grow: 1; /* Занимает оставшееся пространство */
+  height: calc(100vh - 20px - 40px); /* Высота экрана минус хедер и футер */
+  position: relative; /* Чтобы граф занимал всю доступную область */
+  display: block; /* Сбрасываем flex-настройки */
+  overflow: visible; /* Убираем скрытие контента */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

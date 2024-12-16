@@ -1,0 +1,106 @@
+.section-list {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease; /* Плавное изменение ширины */
+}
+
+.section-list.collapsed {
+  width: 40px; /* Узкая ширина для свернутого состояния */
+  padding: 0;
+  overflow: hidden; /* Убираем лишнее содержимое */
+}
+
+.collapse-toggle {
+  width: 40px; /* Постоянная ширина для кнопки-стрелочки */
+  height: 40px;
+  background-color: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%; /* Круглая кнопка */
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Располагаем кнопку в правом верхнем углу */
+}
+
+.collapse-toggle:hover {
+  background-color: #bbdefb; /* Подсветка стрелочки при наведении */
+}
+
+.section-list-content {
+  flex: 1; /* Контент занимает оставшееся пространство */
+  overflow-y: auto;
+  display: block; /* Делаем блок видимым только в развернутом виде */
+}
+
+.section-list.collapsed .section-list-content {
+  display: none; /* Скрываем содержимое при свертывании */
+}
+
+.section-list-content h3 {
+  margin: 0;
+}
+
+.section-list-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section-list-content li {
+  cursor: pointer;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.section-list-content li:hover {
+  background-color: #ccc;
+}
+
+/* Стили для блока выбора языка */
+.language-selector {
+  margin-top: 20px; /* Отступ от контента */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Выравнивание по левому краю */
+  font-size: 14px; /* Меньший размер шрифта */
+  font-weight: 500; /* Сделаем текст немного жирным */
+  color: #333; /* Цвет текста */
+}
+
+.language-selector label {
+  margin-right: 10px; /* Отступ от надписи */
+}
+
+.language-selector select {
+  padding: 5px 10px; /* Отступы для удобства */
+  margin-top: 5px;
+  border-radius: 4px; /* Сглаженные углы */
+  border: 1px solid #ccc; /* Легкая рамка */
+  background-color: #fff; /* Белый фон */
+  cursor: pointer;
+  font-size: 14px; /* Размер шрифта для селектора */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-selector select:hover {
+  border-color: #888; /* Цвет рамки при наведении */
+}
+
+.language-selector select:focus {
+  outline: none; /* Убираем стандартную обводку */
+  box-shadow: 0 0 4px rgba(0, 0, 255, 0.3); /* Легкий эффект фокуса */
+}

@@ -1,0 +1,5 @@
+[
+    { "id": "1", "name": "Section 1", "graphData": { "nodes": [ { "id": "1", "data": { "label": "Theme 1" }, "position": { "x": 100, "y": 100 } } ], "edges": [] } },
+    { "id": "2", "name": "Section 2", "graphData": { "nodes": [ { "id": "2", "data": { "label": "Theme 2" }, "position": { "x": 150, "y": 150 } } ], "edges": [] } }
+  ]
+  
